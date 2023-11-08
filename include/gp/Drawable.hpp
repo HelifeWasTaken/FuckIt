@@ -141,10 +141,8 @@ namespace gp {
 
         void draw() const override {
             gp::glObject::bind(m_vao);
-            int size;
-            glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
-            glDrawElements(GL_TRIANGLES, size / sizeof(GLuint), GL_UNSIGNED_INT, nullptr);
-            //gp::glObject::unbind(m_vao);
+            glDrawElements(GL_TRIANGLES, GP_ARRAY_SIZE(m_indices), GL_UNSIGNED_INT, nullptr);
+            gp::glObject::unbind(m_vao);
         }
     };
 

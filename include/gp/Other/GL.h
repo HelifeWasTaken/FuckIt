@@ -3,4 +3,6 @@
 #include "GL/gl3w.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
+
+#include <iostream>

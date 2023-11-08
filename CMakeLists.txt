@@ -17,6 +17,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(glm)
 FetchContent_MakeAvailable(glfw)
 
+
 set(
     SOURCES
 
@@ -55,6 +56,8 @@ set(
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE ${glfw_SOURCE_DIR}/include)
+
 
 if (WIN32)
     target_link_libraries(${PROJECT_NAME} PRIVATE glfw3 opengl32)

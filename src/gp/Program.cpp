@@ -55,6 +55,7 @@ namespace gp {
                 throw ProgramException("Could not find uniform: " + uniform);
             }
             m_uniform_cache[uniform] = vuniform;
+            std::cout << "Uniform: " << uniform << ", " << vuniform << std::endl;
             return vuniform;
         }
         return it->second;
